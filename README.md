@@ -26,7 +26,8 @@
 /lib           -> DB and socket setup  
 /routes        -> Auth & message handling  
 
-🔧 Setup Instructions
+```
+### 🔧 Setup Instructions
 
 ```bash
 1. Clone the repo
