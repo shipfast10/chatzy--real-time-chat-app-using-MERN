@@ -1,14 +1,13 @@
 # MERN Stack Project: [fullstack chat app]
 
-> A full-stack web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js). This project aims to [faciliate real time text based communication between individuals or groups].
+> A full-stack web application built using the MERN stack (MongoDB, Express.js, React.js, Node.js).
 
 ## 🛠 Tech Stack
 
-- _Frontend:_ React.js, Tailwind CSS / Bootstrap (Optional)
+- _Frontend:_ React.js, Tailwind CSS
 - _Backend:_ Node.js, Express.js
 - _Database:_ MongoDB (with Mongoose ODM)
-- _Authentication:_ JWT / OAuth (Optional)
-- _Others:_ Dotenv, Cors, Axios, Redux / Context API (if used)
+- _Authentication:_ JWT
 
 ## 📦 Features
 
@@ -19,41 +18,38 @@
 - RESTful APIs
 - Error handling and form validation
 
-Highlights:
+### Project Structure
+```bash
 
-- 🌟 Tech stack: MERN + Socket.io + TailwindCSS + Daisy UI
-- 🎃 Authentication && Authorization with JWT
-- 👾 Real-time messaging with Socket.io
-- 🚀 Online user status
-- 👌 Global state management with Zustand
-- 🐞 Error handling both on the server and on the client
-- ⭐ At the end Deployment like a pro for FREE!
-- ⏳ And much more!
+/backend       -> Express server & API routes  
+/frontend      -> React frontend  
+/lib           -> DB and socket setup  
+/routes        -> Auth & message handling  
 
-### Setup .env file
+🔧 Setup Instructions
 
-```js
-MONGODB_URI=...
+```bash
+1. Clone the repo
+
+git clone https://github.com/shipfast10/chatzy--real-time-chat-app-using-MERN.git
+
+2. Set up environment files
+
+Create .env files in both /backend and /frontend with required keys:
+
+# .env (backend)
 PORT=5001
-JWT_SECRET=...
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_secret
+CLOUDINARY_CLOUD_NAME=your_name
+CLOUDINARY_API_KEY=your_key
+CLOUDINARY_API_SECRET=your_secret
 
-CLOUDINARY_CLOUD_NAME=...
-CLOUDINARY_API_KEY=...
-CLOUDINARY_API_SECRET=...
-
-NODE_ENV=development
-```
-
-### Build the app
-
-```shell
+3.Install dependencies and build
 npm run build
-```
+Start the app
 
-### Start the app
-
-```shell
-npm start
+4. npm start
 
 
-```
+
