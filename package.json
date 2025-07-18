@@ -1,0 +1,23 @@
+{
+  "name": "secure-chat-app",
+  "version": "1.0.0",
+  "description": "A real-time secure chat application built with MERN stack.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  },
+  "keywords": [
+    "chat",
+    "real-time",
+    "mern",
+    "messaging",
+    "secure"
+  ],
+  "author": "Bhavya Agarwal",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shipfast10/secure-chat-app.git"
+  }
+}
