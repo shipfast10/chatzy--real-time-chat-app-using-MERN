@@ -15,7 +15,7 @@ import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
 
 const App = () => {
-  const { authUser, checkAuth, isCheckingAuth, onlineUsers } = useAuthStore();
+  const { authUser, checkAuth, isCheckingAuth, onlineUsers, connectSocket, disconnectSocket } = useAuthStore();
   const { theme } = useThemeStore();
 
   useEffect(() => {
@@ -25,6 +25,14 @@ const App = () => {
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
+
+  // This is the new useEffect hook to handle socket connections
+  useEffect(() => {
+    connectSocket();
+    return () => {
+      disconnectSocket();
+    };
+  }, [authUser]);
 
   if (isCheckingAuth && !authUser)
     return (
